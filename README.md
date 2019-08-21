@@ -1,3 +1,16 @@
+# how to run on window 10 CPU
+- switch to branch banjin-dev
+- change "np.int_t " to "np.intp_t" in line 25 of the file utils\bbox\nms.pyx
+- run 
+```shell
+cd utils/bbox
+python setup.py install
+```
+- copy test image to data/demo
+- run 
+```shell
+python main/demo.py
+```
 # text-detection-ctpn
 
 Scene text detection based on ctpn (connectionist text proposal network). It is implemented in tensorflow. The origin paper can be found [here](https://arxiv.org/abs/1609.03605). Also, the origin repo in caffe can be found in [here](https://github.com/tianzhi0549/CTPN). For more detail about the paper and code, see this [blog](http://slade-ruan.me/2017/10/22/text-detection-ctpn/). If you got any questions, check the issue first, if the problem persists, open a new issue.
